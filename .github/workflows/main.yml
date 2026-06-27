@@ -27,10 +27,4 @@ jobs:
       - name: Run Blutter
         run: |
           cd blutter
-          python3 blutter.py ../libapp.so ../output
-          
-      - name: Upload Output
-        uses: actions/upload-artifact@v4
-        with:
-          name: blutter-output
-          path: output/
+          python3 blutter.py /home/runner/work/app-patch/app-patch/libapp.so ../output
